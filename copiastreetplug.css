@@ -294,3 +294,9 @@ footer nav ul li a:hover {
     width: 100%;
     display: block;
 }
+@media only screen and (max-width: 768px) {
+    .slider-container {
+        width: 100%; /* Ajusta el ancho del slider al 35% en móviles */
+        margin: 0 auto; /* Centra el slider horizontalmente */
+    }
+}
