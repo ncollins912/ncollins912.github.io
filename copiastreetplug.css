@@ -300,3 +300,48 @@ footer nav ul li a:hover {
         margin: 0 auto; /* Centra el slider horizontalmente */
     }
 }
+/* Sección Contact */
+.contact {
+    padding: 20px;
+    text-align: center;
+    
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Cambiar color de las letras en el formulario */
+#contact h2 {
+    color: #3498db; /* Color del título */
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact textarea {
+    color: #2c3e50; /* Color del texto dentro de los campos */
+    background-color: #ecf0f1; /* Fondo de los campos */
+    border: 1px solid #bdc3c7; /* Borde de los campos */
+}
+
+#contact input[type="text"]::placeholder,
+#contact input[type="email"]::placeholder,
+#contact textarea::placeholder {
+    color: #95a5a6; /* Color del placeholder (texto de sugerencia) */
+}
+
+#contact button {
+    color: #ffffff; /* Color del texto en el botón */
+    background-color: #2980b9; /* Color de fondo del botón */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#contact button:hover {
+    background-color: #3498db; /* Cambio de color al pasar el ratón por encima */
+}
