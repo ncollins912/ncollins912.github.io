@@ -47,6 +47,47 @@
         </div>
     </div>
 
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>iFrame adaptable</title>
+        <style>
+            /* Estilos para el iframe en computadoras */
+            iframe.desktop {
+                width: 728px;
+                height: 90px;
+            }
+    
+        </style>
+    </head>
+    <body>
+    
+        <iframe src="https://bautistaleguizamon.github.io/supreme/index.html" 
+            frameborder="0" scrolling="no" id="responsive-iframe"></iframe>
+    
+        <script>
+            function adjustIframe() {
+                var iframe = document.getElementById('responsive-iframe');
+                
+                if (window.innerWidth > 768) {
+                    iframe.className = 'desktop';
+                } else {
+                    iframe.className = 'mobile';
+                }
+    
+                iframe.style.display = 'block';
+            }
+    
+            window.onload = adjustIframe;
+            window.onresize = adjustIframe;
+        </script>
+    
+    </body>
+    </html>
+    
+
     <footer>
         <nav>
             <ul>
