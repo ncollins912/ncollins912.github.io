@@ -10,7 +10,7 @@
 <body>
     <header>
         <a href="index.html">
-            <img src="imagenes/logo.jpeg" alt="LOGO" class="logardo">
+            <img src="imagenes/imagenes:grandes/logo.jpeg" alt="LOGO" class="logardo">
         </a>
     
             <p class="texto-blanco">
@@ -29,23 +29,65 @@
     <main>
 		<div class="Imagen 5">
     <a href="catalogo.html">
-        <img src="imagenes/viewall.jpeg" alt="Imagen 5">
+        <img src="imagenes/imagenes:grandes/viewall.jpeg" alt="Imagen 5">
 </div>
         
     </main>
 
     <div class="slider-container">
         <div class="slider">
-            <div class="slide"><img src="imagenes/zapa1.jpeg" alt="Imagen 1"></div>
-            <div class="slide"><img src="imagenes/zapa2.jpeg" alt="Imagen 2"></div>
-            <div class="slide"><img src="imagenes/zapa3.jpeg" alt="Imagen 3"></div>
-            <div class="slide"><img src="imagenes/zapa4.jpeg" alt="Imagen 4"></div>
-            <div class="slide"><img src="imagenes/zapa5.jpeg" alt="Imagen 5"></div>
-            <div class="slide"><img src="imagenes/zapa6.jpeg" alt="Imagen 6"></div>
-            <div class="slide"><img src="imagenes/zapa7.jpeg" alt="Imagen 7"></div>
-            <div class="slide"><img src="imagenes/zapa8.jpeg" alt="Imagen 8"></div>
+            <div class="slide"><img src="imagenes/imagenes:grandes/zapa1.jpeg" alt="Imagen 1"></div>
+            <div class="slide"><img src="imagenes/imagenes:grandes/zapa2.jpeg" alt="Imagen 2"></div>
+            <div class="slide"><img src="imagenes/imagenes:grandes/zapa3.jpeg" alt="Imagen 3"></div>
+            <div class="slide"><img src="imagenes/imagenes:grandes/zapa4.jpeg" alt="Imagen 4"></div>
+            <div class="slide"><img src="imagenes/imagenes:grandes/zapa5.jpeg" alt="Imagen 5"></div>
+            <div class="slide"><img src="imagenes/imagenes:grandes/zapa6.jpeg" alt="Imagen 6"></div>
+            <div class="slide"><img src="imagenes/imagenes:grandes/zapa7.jpeg" alt="Imagen 7"></div>
+            <div class="slide"><img src="imagenes/imagenes:grandes/zapa8.jpeg" alt="Imagen 8"></div>
         </div>
     </div>
+
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>iFrame adaptable</title>
+        <style>
+            /* Estilos para el iframe en computadoras */
+            iframe.desktop {
+                width: 728px;
+                height: 90px;
+            }
+    
+        </style>
+    </head>
+    <body>
+    
+        <div class="cajapublicidad">
+            <iframe class="anuncio" src="https://bautistaleguizamon.github.io/supreme/anuncio.html" width="100%"  name="marco" frameborder="0" scrolling="no"></iframe>
+    </div>
+    
+        <script>
+            function adjustIframe() {
+                var iframe = document.getElementById('responsive-iframe');
+                
+                if (window.innerWidth > 768) {
+                    iframe.className = 'desktop';
+                } else {
+                    iframe.className = 'mobile';
+                }
+    
+                iframe.style.display = 'block';
+            }
+    
+            window.onload = adjustIframe;
+            window.onresize = adjustIframe;
+        </script>
+    
+    </body>
+    </html>
+    
 
     <footer>
         <nav>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campaña Email</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+        }
+        .header {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+        .header img {
+            max-width: 150px;
+            height: auto;
+        }
+        .two-column {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+        .column {
+            width: 50%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .column img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        .column p {
+            font-size: 16px;
+            line-height: 1.5;
+            text-align: center;
+        }
+        .form-container {
+            padding: 20px;
+            text-align: center;
+        }
+        .form-container input[type="email"] {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-container input[type="submit"] {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .form-container input[type="submit"]:hover {
+            background-color: #555;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 20px;
+        }
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+        @media only screen and (max-width: 600px) {
+            .column {
+                width: 100%;
+                padding: 5px;
+            }
+            .form-container input[type="email"] {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="https://ncollins912.github.io/index.html">
+                <img src="https://ncollins912.github.io/imagenes/logo.jpeg" alt="Logo Streetplug">
+            </a>
+            <h1>Bienvenido a Streetplug</h1>
+        </div>
+        <div class="two-column">
+            <div class="column">
+                <a href="https://ncollins912.github.io/catalogo.html">
+                    <img src="https://ncollins912.github.io/imagenes/zapa1.jpeg" alt="Imagen Producto 1">
+                </a>
+                <p>Descubre nuestra nueva colección de zapatillas. Edicion Limitada.
+                </p>
+            </div>
+            <div class="column">
+                <a href="https://ncollins912.github.io/catalogo.html">
+                    <img src="https://ncollins912.github.io/imagenes/zapa3.jpeg" alt="Imagen Producto 2">
+                </a>
+                <p>Compra antes de que se agote. Ofrecemos envíos gratuitos en compras seleccionadas.</p>
+            </div>
+        </div>
+
+        
+        <div class="form-container">
+            <h2>Regístrate para recibir nuestras novedades</h2>
+            <form action="https://example.com/subscribe" method="POST">
+                <input type="email" name="email" placeholder="Introduce tu correo electrónico" required>
+                <input type="submit" value="Suscribirse">
+            </form>
+        </div>
+
+        <div class="footer">
+            <p>Contáctanos: <a href="mailto:streetplug@gmail.com">streetplug@gmail.com</a></p>
+            <p>Tel: <a href="https://wa.me/1155646511">11 5564-6511</a></p>
+            <p>Síguenos en <a href="https://www.instagram.com/streetplug_ba">@StreetPlug_ba</a></p>
+        </div>
+    </div>
+</body>
+</html>
