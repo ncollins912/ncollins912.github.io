@@ -10,7 +10,7 @@
 <body>
     <header>
         <a href="index.html">
-            <img src="imagenes/logo.jpeg" alt="LOGO" class="logardo">
+            <img src="imagenes/imagenes:grandes/logo.jpeg" alt="LOGO" class="logardo">
         </a>
     
             <p class="texto-blanco">
@@ -29,21 +29,21 @@
     <main>
 		<div class="Imagen 5">
     <a href="catalogo.html">
-        <img src="imagenes/viewall.jpeg" alt="Imagen 5">
+        <img src="imagenes/imagenes:grandes/todos.jpeg" alt="Imagen 5">
 </div>
         
     </main>
 
     <div class="slider-container">
         <div class="slider">
-            <div class="slide"><img src="imagenes/zapa1.jpeg" alt="Imagen 1"></div>
-            <div class="slide"><img src="imagenes/zapa2.jpeg" alt="Imagen 2"></div>
-            <div class="slide"><img src="imagenes/zapa3.jpeg" alt="Imagen 3"></div>
-            <div class="slide"><img src="imagenes/zapa4.jpeg" alt="Imagen 4"></div>
-            <div class="slide"><img src="imagenes/zapa5.jpeg" alt="Imagen 5"></div>
-            <div class="slide"><img src="imagenes/zapa6.jpeg" alt="Imagen 6"></div>
-            <div class="slide"><img src="imagenes/zapa7.jpeg" alt="Imagen 7"></div>
-            <div class="slide"><img src="imagenes/zapa8.jpeg" alt="Imagen 8"></div>
+            <div class="slide"><img src="imagenes/imagenes:grandes/zapa1.jpeg" alt="Imagen 1"></div>
+            <div class="slide"><img src="imagenes/imagenes:grandes/zapa2.jpeg" alt="Imagen 2"></div>
+            <div class="slide"><img src="imagenes/imagenes:grandes/zapa3.jpeg" alt="Imagen 3"></div>
+            <div class="slide"><img src="imagenes/imagenes:grandes/zapa4.jpeg" alt="Imagen 4"></div>
+            <div class="slide"><img src="imagenes/imagenes:grandes/zapa5.jpeg" alt="Imagen 5"></div>
+            <div class="slide"><img src="imagenes/imagenes:grandes/zapa6.jpeg" alt="Imagen 6"></div>
+            <div class="slide"><img src="imagenes/imagenes:grandes/zapa7.jpeg" alt="Imagen 7"></div>
+            <div class="slide"><img src="imagenes/imagenes:grandes/zapa8.jpeg" alt="Imagen 8"></div>
         </div>
     </div>
 
@@ -100,16 +100,18 @@
     </footer>
 
     <script>
-        let currentIndex = 0;
-        const slides = document.querySelectorAll('.slide');
-        const totalSlides = slides.length;
-    
-        function showNextSlide() {
-            currentIndex = (currentIndex + 1) % (totalSlides - 2); // Muestra las imágenes en bloques de 4
-            document.querySelector('.slider').style.transform = `translateX(-${currentIndex * 100 / 4}%)`;
-        }
-    
-        setInterval(showNextSlide, 3000); // Cambia cada 3 segundos
+let currentIndex = 0;
+const slides = document.querySelectorAll('.slide');
+const totalSlides = slides.length;
+
+function showNextSlide() {
+    currentIndex = (currentIndex + 1) % totalSlides; // Volver al inicio cuando llegue al final
+    document.querySelector('.slider').style.transform = `translateX(-${currentIndex * 100}%)`;
+}
+
+setInterval(showNextSlide, 3000); // Cambia cada 3 segundos
+
+        
     </script>
     
 </body>

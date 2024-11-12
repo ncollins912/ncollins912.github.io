@@ -383,3 +383,142 @@ footer nav ul li a:hover {
     font-size: 30px;
     text-decoration: none;
 }
+/* Estilos de la sección Contact */
+.contact {
+    padding: 20px;
+    text-align: center;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaciado mayor entre los campos */
+    max-width: 500px; /* Aumentar el tamaño máximo del formulario */
+    margin: 0 auto;
+}
+
+/* Ajustes en campos de entrada y textarea */
+#contact input[type="text"],
+#contact input[type="email"],
+#contact textarea {
+    font-size: 16px; /* Aumentar el tamaño de fuente para mejor legibilidad */
+    padding: 12px; /* Aumentar el padding para hacerlo más fácil de tocar */
+    width: 100%; /* Asegura que ocupen todo el ancho disponible */
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+}
+
+#contact textarea {
+    min-height: 150px; /* Asegura que el textarea sea suficientemente grande para escribir cómodamente */
+}
+
+/* Estilo de los botones */
+#contact button {
+    font-size: 18px; /* Aumentar el tamaño de la fuente del botón */
+    padding: 12px 20px; /* Aumentar el tamaño del botón */
+    width: 100%; /* El botón ocupa todo el ancho disponible */
+    cursor: pointer;
+}
+
+/* Ajustes para dispositivos móviles */
+@media (max-width: 768px) {
+    .contact-form {
+        max-width: 90%; /* Reduce el tamaño máximo para que se ajuste mejor en pantallas pequeñas */
+    }
+
+    #contact input[type="text"],
+    #contact input[type="email"],
+    #contact textarea {
+        font-size: 18px; /* Aumentar el tamaño de la fuente en dispositivos pequeños */
+        padding: 15px; /* Aumentar el padding para mejorar la interacción táctil */
+    }
+
+    #contact button {
+        font-size: 20px; /* Aumentar el tamaño del texto en el botón */
+        padding: 15px 25px; /* Aumentar el tamaño del botón */
+    }
+}
+/* Estilos para las imágenes con texto encima */
+.image-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 20px 0;
+    flex-wrap: wrap;  /* Asegura que las imágenes se ajusten en pantallas pequeñas */
+}
+
+.image-text {
+    position: relative;
+    width: 23%;
+    margin-bottom: 20px;
+}
+
+.image-text img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.image-text:hover img {
+    transform: scale(1.05);
+}
+
+.text-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* Información adicional debajo de las imágenes */
+.text-info {
+    padding: 20px;
+    color: white;
+    background-color: #333;
+    text-align: center;
+}
+
+.text-info h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.text-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.text-info ul li {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+/* Media Queries para Mobile */
+@media (max-width: 768px) {
+    .image-container {
+        display: block; /* Cambiar el layout para que las imágenes se muestren verticalmente */
+    }
+
+    .image-text {
+        width: 100%; /* Las imágenes ocuparán todo el ancho disponible */
+    }
+
+    .text-info {
+        padding: 15px;
+    }
+
+    .text-info h3 {
+        font-size: 20px;
+    }
+
+    .text-info ul li {
+        font-size: 16px;
+    }
+}
