@@ -5,6 +5,18 @@
     <title>Streetplug</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="copiastreetplug.css">
+    <style>
+        /* Estilos para el mensaje de éxito */
+        .success-message {
+            display: none;
+            background-color: #28a745;
+            color: white;
+            padding: 10px;
+            margin-top: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
@@ -13,9 +25,8 @@
             <img src="imagenes/imagenes:grandes/logo.jpeg" alt="LOGO" class="logardo">
         </a>
     
-            <p class="texto-blanco">
-                <a href="index.html" class="StreetPlug"></a>
-            </p>
+        <p class="texto-blanco">
+            <a href="index.html" class="StreetPlug"></a>
         </p>
         <nav>
             <ul>
@@ -26,26 +37,28 @@
         </nav>
     </header>
 
-
     <main>     
-    <h1>
-        StreetPlug, tu destino de confianza para sneakers y ropa urbana de alta calidad. 
-        Nos especializamos en la reventa de zapatillas exclusivas y prendas difíciles de encontrar de las mejores marcas, 
-        ofreciendo una experiencia única para los amantes de la moda. 
+        <h1>
+            StreetPlug, tu destino de confianza para sneakers y ropa urbana de alta calidad. 
+            Nos especializamos en la reventa de zapatillas exclusivas y prendas difíciles de encontrar de las mejores marcas, 
+            ofreciendo una experiencia única para los amantes de la moda. 
         </h1>
     </main>
 
-    <Contact Section>
-        <section id="contact" class="contact">
-            <h2>Contact Us</h2>
-            <form class="contact-form">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" required></textarea>
-                <button type="submit">Send</button>
-            </form>
-        </section>
-        
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form class="contact-form" id="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+
+        <!-- Mensaje de éxito -->
+        <div id="success-message" class="success-message">
+            Enviado correctamente
+        </div>
+    </section>
 
     <footer>
         <nav>
@@ -56,5 +69,22 @@
             </ul>
         </nav>
     </footer>
+
+    <script>
+        // Obtiene el formulario y el mensaje de éxito
+        const form = document.getElementById('contact-form');
+        const successMessage = document.getElementById('success-message');
+
+        // Agrega el evento de envío al formulario
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita el envío del formulario real
+
+            // Muestra el mensaje de éxito
+            successMessage.style.display = 'block';
+
+            // Opcional: Limpiar los campos del formulario
+            form.reset();
+        });
+    </script>
 </body>
 </html>

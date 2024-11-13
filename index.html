@@ -5,6 +5,24 @@
     <title>Streetplug</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="copiastreetplug.css">
+    <style>
+        /* Estilos para el botón de Presentación */
+        .presentation-button {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .presentation-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 
 <body>
@@ -44,6 +62,10 @@
             <div class="slide"><img src="imagenes/imagenes:grandes/zapa6.jpeg" alt="Imagen 6"></div>
             <div class="slide"><img src="imagenes/imagenes:grandes/zapa7.jpeg" alt="Imagen 7"></div>
             <div class="slide"><img src="imagenes/imagenes:grandes/zapa8.jpeg" alt="Imagen 8"></div>
+            <div class="slide"><img src="imagenes/imagenes:grandes/zapa1.jpeg" alt="Imagen 9"></div>
+            <div class="slide"><img src="imagenes/imagenes:grandes/zapa2.jpeg" alt="Imagen 10"></div>
+
+
         </div>
     </div>
 
@@ -97,22 +119,27 @@
                 <li><a href="https://www.instagram.com/streetplug_ba" class="Insta">@StreetPlug_ba</a></li>
             </ul>
         </nav>
-    </footer>
+    <a href="presentacion.html" class="presentation-button">Presentación</a>
+</footer>
 
     <script>
-let currentIndex = 0;
-const slides = document.querySelectorAll('.slide');
-const totalSlides = slides.length;
-
-function showNextSlide() {
-    currentIndex = (currentIndex + 1) % totalSlides; // Volver al inicio cuando llegue al final
-    document.querySelector('.slider').style.transform = `translateX(-${currentIndex * 100}%)`;
-}
-
-setInterval(showNextSlide, 3000); // Cambia cada 3 segundos
-
-        
+        let currentIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+        const maxSlides = 3; // Número máximo de diapositivas a mostrar antes de reiniciar
+        const totalSlides = slides.length;
+    
+        function showNextSlide() {
+            currentIndex++;
+            if (currentIndex >= maxSlides) {
+                currentIndex = 0; // Volver a la primera imagen después de la tercera
+            }
+            document.querySelector('.slider').style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+    
+        // Iniciar el carrusel
+        setInterval(showNextSlide, 3000); // Cambia cada 3 segundos
     </script>
+    
     
 </body>
 </html>

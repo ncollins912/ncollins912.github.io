@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentación Streetplug</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        .presentation-container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .slide {
+            display: none;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Cambios en los títulos */
+        .slide h1 {
+            font-size: 2.5em;
+            color: #007bff; /* Azul */
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Estilos para la imagen */
+        .slide img {
+            max-width: 70%;
+            margin-bottom: 20px;
+        }
+
+        /* Footer centrado */
+        .footer {
+            text-align: center;
+            font-size: 1em;
+            color: #333;
+            margin-top: 20px;
+        }
+
+        .footer p {
+            margin: 5px;
+        }
+
+        /* Estilos de las imágenes en la Slide 4 */
+        .slide img {
+            width: 25%;
+            margin: 10px;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        /* Estilo para las imágenes del Slide 6: una más grande y otra más pequeña */
+        #slide6 img {
+            display: inline-block;
+            margin: 10px;
+        }
+
+        #slide6 img:first-child {
+            width: 50%; /* Imagen 1 más grande */
+        }
+
+        #slide6 img:last-child {
+            width: 15%; /* Imagen 2 más pequeña */
+        }
+
+        /* Navegación */
+        .navigation-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        /* Estilos de la descripción Slide 5 */
+        .slide p {
+            font-size: 1.5em;
+            color: #333;
+            line-height: 1.5;
+        }
+
+        /* Estilo para la Slide 7: lista horizontal */
+        .slide ul {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 0;
+        }
+
+        .slide ul li {
+            list-style: none;
+            font-size: 1.5em;
+            color: #333;
+        }
+
+        /* Botón de ir a la página */
+        .button-link {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="presentation-container">
+    <!-- Slide 1 -->
+    <div class="slide" id="slide1">
+        <img src="imagenes/imagenes:grandes/logo.jpeg" alt="Logo">
+        <h1>Streetplug</h1>
+        <div class="footer">
+            <p>Alumno: Nahuel Collins</p>
+            <p>Profesor: Wenceslao Zavala</p>
+            <p>Materia: Materiales y Procesos I</p>
+        </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slide" id="slide2">
+        <h1>¿ De que trata la pagina ?</h1>
+    </div>
+
+     <!-- Slide 5 --> 
+     <div class="slide" id="slide5">
+        <h1>Descripción del proyecto</h1>
+        <p>La página está dedicada a la venta de ropa para la marca StreetPlug. Encontrando la informacion del negocio y su catalogo. Buscamos ser tu destino de confianza para sneakers y ropa urbana de alta calidad. Nos especializamos en la reventa de zapatillas exclusivas y prendas difíciles de encontrar.</p>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="slide" id="slide3">
+        <h1>Catalogo</h1>
+        <img src="imagenes/imagenes:chicas/zapa1chica.jpeg" alt="Zapatilla 1">
+        <img src="imagenes/imagenes:chicas/zapa2chica.jpeg" alt="Zapatilla 2">
+        <img src="imagenes/imagenes:chicas/zapa3chica.jpeg" alt="Zapatilla 3">
+    </div>
+
+    <!-- Slide 4 -->
+    <div class="slide" id="slide4">
+        <h1>Informacion</h1>
+        <img src="imagenes/imagenes:grandes/imagen1.jpeg" alt="Imagen 1">
+        <img src="imagenes/imagenes:grandes/imagen2.jpeg" alt="Imagen 2">
+        <img src="imagenes/imagenes:grandes/imagen3.jpeg" alt="Imagen 3">
+    </div>
+
+    <!-- Slide 6 -->
+    <div class="slide" id="slide6">
+        <img src="imagenes/imagenes:grandes/Presentacion1.jpeg" alt="Imagen 5">
+        <img src="imagenes/imagenes:grandes/Presentacion2.jpeg" alt="Imagen 6">
+    </div>
+
+    <!-- Slide 7 -->
+    <div class="slide" id="slide7">
+        <h1>Diseño y Fundamentación</h1>
+        <ul>
+            <li>* Interfaz sencilla e intuitiva</li>
+            <li>* Colores monótonos</li>
+            <li>* Diseño inspirado en la compañía</li>
+        </ul>
+    </div>
+
+    <!-- Slide 8 -->
+    <div class="slide" id="slide8">
+        <a href="https://ncollins912.github.io/index.html" class="button-link">IR A LA PAGINA</a>
+    </div>
+
+    <!-- Navegación -->
+    <button class="navigation-button prev" onclick="changeSlide(-1)">&#10094;</button>
+    <button class="navigation-button next" onclick="changeSlide(1)">&#10095;</button>
+</div>
+
+<script>
+    let currentSlide = 1;
+    const totalSlides = document.querySelectorAll('.slide').length;
+
+    function showSlide(index) {
+        const slides = document.querySelectorAll('.slide');
+        if (index < 1) {
+            currentSlide = totalSlides;
+        } else if (index > totalSlides) {
+            currentSlide = 1;
+        } else {
+            currentSlide = index;
+        }
+
+        slides.forEach((slide, i) => {
+            slide.style.display = (i + 1 === currentSlide) ? 'block' : 'none';
+        });
+    }
+
+    function changeSlide(direction) {
+        showSlide(currentSlide + direction);
+    }
+
+    // Inicializar la primera diapositiva
+    showSlide(currentSlide);
+</script>
+
+</body>
+</html>
