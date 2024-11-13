@@ -9,6 +9,8 @@
         /* Estilos generales */
         * {
             box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
 
         body {
@@ -18,27 +20,25 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            margin: 0;
-            padding: 10px;
         }
 
         .anuncio {
             display: flex;
-            justify-content: center;
-            align-items: center;
+            justify-content: center; /* Centrar elementos horizontalmente */
+            align-items: center;    /* Centrar elementos verticalmente */
             background-color: #fff;
-            padding: 8px; /* Reducir padding */
+            padding: 10px; /* Ajustar padding para un mejor diseño */
             border-radius: 5px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            max-width: 400px;
-            width: 70%;
-            gap: 8px; /* Reducir espacio entre elementos */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            max-width: 300px;
+            width: 100%;
+            gap: 10px; /* Ajustar espacio entre elementos */
         }
 
         .logo, .ad-image {
-            height: 60px; /* Reducir altura de imágenes */
+            height: 40px; /* Reducir altura de imágenes */
             width: auto;
-            margin: 8px;
+            display: block; /* Asegura que la imagen se comporte correctamente */
         }
 
         .logo:hover, .ad-image:hover {
@@ -51,11 +51,13 @@
             text-decoration: none;
             background-color: #1f48fd;
             color: white;
-            padding: 8px 16px; /* Reducir padding del botón */
+            padding: 5px 15px; /* Reducir padding del botón */
             border-radius: 5px;
+            font-size: 14px;
             font-weight: bold;
             transition: background-color 0.3s ease;
             display: inline-block;
+            text-align: center;
         }
 
         .btn-visitar:hover {
@@ -63,24 +65,23 @@
         }
 
         /* Diseño para pantallas pequeñas */
-        @media (max-width: 727px) {
+        @media (max-width: 600px) {
             .anuncio {
                 flex-direction: column;
-                gap: 8px; /* Reducir espacio vertical */
+                gap: 10px;
                 text-align: center;
-                padding: 10px; /* Reducir padding en móviles */
-                width: 100%;
+                padding: 10px;
+                max-width: 100%;
             }
 
             .logo, .ad-image {
-                height: 80px; /* Ajustar altura en pantallas pequeñas */
-                width: auto;
-                margin: 0 auto;
+                height: 50px; /* Ajustar altura en pantallas pequeñas */
+                margin-bottom: 5px;
             }
 
             .btn-visitar {
                 width: 100%;
-                padding: 10px; /* Reducir padding del botón en móviles */
+                padding: 8px;
                 font-size: 16px;
             }
         }
